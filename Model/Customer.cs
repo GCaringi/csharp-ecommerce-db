@@ -8,4 +8,9 @@ public partial class Customer
     public string Email { get; set; }
     //(1...*) With Orders
     public virtual ICollection<Order> Orders { get; set; }
+    
+    public Customer()
+    {
+        Orders = new HashSet<Order>();
+    }
 }

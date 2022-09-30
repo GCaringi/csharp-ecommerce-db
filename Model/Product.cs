@@ -11,4 +11,9 @@ public partial class Product
     public decimal Price { get; set; }
     //(*...*) With Orders
     public virtual ICollection<Order> Orders { get; set; }
+    
+    public Product()
+    {
+        Orders = new HashSet<Order>();
+    }
 }

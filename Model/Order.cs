@@ -20,4 +20,9 @@ public partial class Order
     //(*...*) With Products
     public virtual ICollection<Product> Products { get; set; }
 
+    public Order()
+    {
+        Payaments = new List<Payment>();
+        Products = new List<Product>();
+    }
 }

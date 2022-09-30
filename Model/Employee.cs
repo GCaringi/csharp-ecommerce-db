@@ -11,4 +11,9 @@ public partial class Employee
     //(1...*) With Orders
     public virtual ICollection<Order> Orders { get; set; }
 
+    public Employee()
+    {
+        Orders = new HashSet<Order>();
+    }
+
 }
